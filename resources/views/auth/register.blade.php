@@ -57,10 +57,10 @@
         <div class="container align-items-center">
           <div class="row align-items-center">
             <!--end of col-->
-            <div class="col-md-8">
+            <div class="col-md-10">
               <div class="overflow-visible" data-flickity='{ "cellAlign": "center", "contain": true, "prevNextButtons": false, "pageDots":false, "wrapAround":true, "autoPlay":5000, "imagesLoaded":true, "initialIndex":3, "draggable":false }'>
 
-                <div class="carousel-cell col-md-9 align-items-center" style="background:lavender; border-radius:5px; padding:12px;">
+                <div class="carousel-cell col-md-9 align-items-center" style="background:rgb(241,254,245); border-radius:5px; padding:12px;">
                   <form method="POST" action="{{ route('register') }}">
                         @csrf
                   <div class="form-group">
