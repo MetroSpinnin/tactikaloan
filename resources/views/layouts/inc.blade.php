@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a href="loan.php" class="nav-link"><font color="green">Loan</font></a>
+                  <a href="/loan" class="nav-link"><font color="green">Loan</font></a>
                 </li>
                 <li class="nav-item">
-                  <a href="investors.php" class="nav-link"><font color="green">Investors</font></a>
+                  <a href="/investors" class="nav-link"><font color="green">Investors</font></a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"><font color="green">Contact Us</font></a>
@@ -41,7 +41,7 @@
 
               <ul class="navbar-nav">
                 <li class="nav-item d-flex align-items-center">
-                  <a href="#" class="btn btn-success"><b>Login Now</b></a>
+                  <a href="/login" class="btn btn-success"><b>Login Now</b></a>
                 </li>
               </ul>
 
