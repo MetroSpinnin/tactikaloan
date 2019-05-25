@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/loan', 'PageController@loanPage');
 Route::get('/investors', 'PageController@investorsPage');
+
+Route::resource('loanapplication', 'LoansApplicationController');
