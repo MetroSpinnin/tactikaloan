@@ -38,6 +38,12 @@ class LoansApplicationController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'employmentstatus' => 'required',
+            'occupation' => 'required',
+            'businessname' => 'required',
+            'businessaddress' => 'required',
+        ])
     }
 
     /**
