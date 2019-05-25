@@ -1,60 +1,6 @@
-
-<!doctype html>
-<html lang="en">
-
-  <head>
-   <meta charset="utf-8">
-    <title>Tactika</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tactika">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500" rel="stylesheet">
-    <link href="{{assets(css/socicon.css)}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{assets(css/entypo.css)}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{assets(css/theme.css)}}" rel="stylesheet" type="text/css" media="all" />
-    <style>@font-face{font-family:all; src:url(fonts/fonts/Nunito-Regular.woff)format('woff');} *{font-family: all;} .bg-darky{background:lavender !important;}.dotter{border:2px dashed green; border-radius:100%;}.bg-gradient {background: linear-gradient(135deg, #283c86 0%, #45a247 100%),url("assets/img/be22.png") !important;}.navabar-toggler{color:green}</style>
-  </head>
-
-  <body>
-   <div class="navbar-container">
-      <div class="bg-darky navbar-dark" data-sticky="top">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php">
-              <img alt="Tactika" src="assets/img/logo.png" width="120px" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon bg-success" style="border: 1px dashed green !important; padding:5px !important;"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a href="loan.php" class="nav-link"><font color="green">Loan</font></a>
-                </li>
-                <li class="nav-item">
-                  <a href="investors.php" class="nav-link"><font color="green">Investors</font></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"><font color="green">Contact Us</font></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#faq" id="componentsDropdown" role="button" data-toggle="dropdown"><font color="green">FAQs</font></a>
-                  </li>
-              </ul>
-
-              <ul class="navbar-nav">
-                <li class="nav-item d-flex align-items-center">
-                  <a href="#" class="btn btn-success"><b>Login Now</b></a>
-                </li>
-              </ul>
-
-            </div>
-            <!--end nav collapse-->
-          </nav>
-        </div>
-        <!--end of container-->
-      </div>
-    </div>
-    <div class="main-container">
+@extends('layouts.inc')
+@section('content')
+<div class="main-container">
       <section class="space-lg bg-gradient">
         <div class="container">
           <div class="row align-items-center">
@@ -107,7 +53,7 @@
             </div>
             <!--end of col-->
             <div class="col-8 col-md-6 col-lg-4">
-              <img alt="Image" src="assets/img/graphic-developer-group.svg" class="img-fluid shadow" />
+              <img alt="Image" src="{{asset('img/graphic-developer-group.svg')}}" class="img-fluid shadow" />
             </div>
             <!--end of col-->
           </div>
@@ -121,7 +67,7 @@
           <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
               <div class="media">
-                <img alt="Image" src="assets/img/avatar-male-3.jpg" class="avatar avatar-lg" />
+                <img alt="Image" src="{{asset('img/avatar-male-3.jpg')}}" class="avatar avatar-lg" />
                 <div class="media-body">
                   <p class="h2">
                     “With Tactika, you get your desired Loan amount with lowest interest rates in less than 10 Minutes.”
@@ -189,13 +135,13 @@
             <div class="col-12 col-md-6 order-md-1">
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="tab-1">
-                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="assets/img/be22.png" />
+                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="{{asset('img/be22.png')}}" />
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="tab-2">
-                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="assets/img/be11.png" />
+                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="{{asset('img/be11.png')}}" />
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="tab-3">
-                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="assets/img/be1.jpg" />
+                  <img alt="Image" class="img-fluid shadow rounded-circle dotter" src="{{asset('img/be1.jpg')}}" />
                 </div>
               </div>
             </div>
@@ -295,80 +241,4 @@
         <!--end of container-->
       </section>
       <!--end of section-->
-      <footer class="footer-short well">
-        <div class="container">
-          <hr>
-          <nav class="row justify-content-between align-items-center">
-            <div class="col-auto">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a href="#">
-                    <img alt="Image" src="assets/img/logo.png" width="100px"/>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/privacy"><font color="gray">Privacy Policy</font></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="/terms"><font color="gray">Terms</font></a>
-                </li>
-              </ul>
-            </div>
-            <!--end of col-->
-            <div class="col-auto text-sm-right">
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a href="#"><i class="socicon-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="#"><i class="socicon-facebook"></i></a>
-                </li>
-              </ul>
-            </div>
-            <!--end of col-->
-          </nav>
-          <!--end of row-->
-          <div class="row">
-            <div class="col">
-              <small>&copy; <?php echo date("Y");?><font color="gray"> Tactika All Rights Reserved crafted by MixedFraction</font></small>
-            </div>
-            <!--end of col-->
-          </div>
-          <!--end of row-->
-        </div>
-        <!--end of container-->
-      </footer>
-    </div>
-
-    <!-- Required vendor scripts (Do not remove) -->
-    <script type="text/javascript" src="{{assets(js/jquery.js)}}"></script>
-    <script type="text/javascript" src="{{assets(js/popper.min.js)}}"></script>
-    <script type="text/javascript" src="{{assets(js/bootstrap.js)}}"></script>
-
-    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
-
-    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
-    <script type="text/javascript" src="{{assets(js/aos.js)}}"></script>
-    <!-- Flatpickr (calendar/date/time picker UI) -->
-    <script type="text/javascript" src="{{assets(js/flatpickr.min.js)}}"></script>
-    <!-- Flickity (handles touch enabled carousels and sliders) -->
-    <script type="text/javascript" src="{{assets(js/flickity.pkgd.min.js)}}"></script>
-    <!-- jarallax (parallax effect and video backgrounds) -->
-    <script type="text/javascript" src="{{assets(js/jarallax.min.js)}}"></script>
-    <script type="text/javascript" src="{{assets(js/jarallax-video.min.js)}}"></script>
-    <script type="text/javascript" src="{{assets(js/jarallax-element.min.js)}}"></script>
-    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
-    <script type="text/javascript" src="{{assets(js/scrollMonitor.js)}}"></script>
-    <!-- jQuery smartWizard facilitates steppable wizard content -->
-    <script type="text/javascript" src="{{assets(js/jquery.smartWizard.js)}}"></script>
-    <!-- Smooth scroll (animation to links in-page)-->
-    <script type="text/javascript" src="{{assets(js/smooth-scroll.polyfills.min.js)}}"></script>
-    <!-- Prism (displays formatted code boxes) -->
-    <script type="text/javascript" src="{{assets(js/prism.js)}}"></script>
-    <script type="text/javascript" src="{{assets(js/zoom-vanilla.min.js)}}"></script>
-
-    <!-- Required theme scripts (Do not remove) -->
-    <script type="text/javascript" src="{{assets(js/theme.js)}}"></script>
-  </body>
-
-</html>
+@endsection
