@@ -61,12 +61,12 @@
 <div class="overflow-visible" data-flickity='{ "cellAlign": "center", "contain": true, "prevNextButtons": false, "pageDots":false, "wrapAround":true, "autoPlay":5000, "imagesLoaded":true, "initialIndex":3, "draggable":false }'>
 
 <div class="carousel-cell col-md-9 align-items-center" style="background:rgb(241,254,245); border-radius:5px; padding:12px;">
-<form method="POST" action="{{LoansApplicationController@store}}">
+<form method="POST" action="{{action('LoansApplicationController@store')}}">
 @csrf
 <div class="form-group">
 <input id="employmentstatus" type="text" class="form-control @error('employmentstatus') is-invalid @enderror" name="employmentstatus" value="{{ old('employmentstatus') }}" placeholder="employment status" required autocomplete="employmentstatus" autofocus>
 
-@error('name')
+@error('employmentstatus')
 <span class="invalid-feedback" role="alert">
 <strong>{{ $message }}</strong>
 </span>
@@ -83,7 +83,7 @@
 
 </div>
 <div class="form-group">
-<input id="businessname" type="text" class="form-control @error('businessname') is-invalid @enderror" name="businessname" placeholder="business name" required autocomplete="businessname">
+<input id="businessname" type="text" class="form-control @error('businessname') is-invalid @enderror" name="BusinessName" placeholder="business name" required autocomplete="businessname">
 
 @error('password')
 <span class="invalid-feedback" role="alert">
@@ -93,7 +93,7 @@
 
 </div>
 <div class="form-group">
-<textarea id="businessaddress" type="text" class="form-control @error('businessaddress') is-invalid @enderror" name="businessaddress" required autocomplete="businessaddress">Business Address</textarea>
+<textarea id="businessaddress" type="text" class="form-control @error('businessaddress') is-invalid @enderror" name="BusinessAddress" required autocomplete="businessaddress">Business Address</textarea>
 
 @error('password')
 <span class="invalid-feedback" role="alert">
@@ -103,7 +103,7 @@
 
 </div>
 <div class="form-group">
-<input id="phonenumber" type="text" class="form-control @error('phonenumber') is-invalid @enderror" name="phonenumber" placeholder="phone number" required autocomplete="phonenumber">
+<input id="phonenumber" type="text" class="form-control @error('phonenumber') is-invalid @enderror" name="phoneNumber" placeholder="phone number" required autocomplete="phonenumber">
 
 @error('password')
 <span class="invalid-feedback" role="alert">
@@ -113,7 +113,7 @@
 
 </div>
 <div class="form-group">
-<input id="loanamount" type="text" class="form-control @error('loanamount') is-invalid @enderror" name="loanamount" placeholder="Loan amount" required autocomplete="loanamount">
+<input id="loanamount" type="text" class="form-control @error('loanamount') is-invalid @enderror" name="loanAmount" placeholder="Loan amount" required autocomplete="loanamount">
 
 @error('password')
 <span class="invalid-feedback" role="alert">
