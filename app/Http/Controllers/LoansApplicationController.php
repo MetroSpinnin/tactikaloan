@@ -83,7 +83,8 @@ class LoansApplicationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $loanApp = LoanApplication::find($id);
+        return view('LoanApplication.edit')->with('loanApp', $loanApp);
     }
 
     /**
@@ -96,6 +97,28 @@ class LoansApplicationController extends Controller
     public function update(Request $request, $id)
     {
         //
+         $this->validate($request, [
+            'employmentstatus' => 'required',
+            'occupation' => 'required',
+            'BusinessName' => 'required',
+            'BusinessAddress' => 'required',
+            'phoneNumber' => 'required',
+            'loanAmount' => 'required'
+        ]);
+
+        //create Loans
+        $loan  = LoanApplication::find($id);
+        $loan->employmentstatus = $request->input('employmentstatus');
+        $loan->occupation = $request->input('occupation');
+        $loan->BusinessName = $request->input('BusinessName');
+        $loan->BusinessAddress = $request->input('BusinessAddress');
+        $loan->phoneNumber = $request->input('phoneNumber');
+        $loan->loanAmount = $request->input('loanAmount');
+        $loan->save();
+
+        //return redirects after saving to Database
+
+        return redirect('/loanapplication')->with('success', 'Loan request update successful');
     }
 
     /**
@@ -106,6 +129,8 @@ class LoansApplicationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $loanApp = LoanApplication::find($id);
+        $loanApp->delete();
+        return redirect('/loanapplication');
     }
 }

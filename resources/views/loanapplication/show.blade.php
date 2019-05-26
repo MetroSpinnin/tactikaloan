@@ -49,7 +49,7 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
+        <h5 class="card-title">Phone Number</h5>
         <p class="card-text " align="justify"><span class="squared">Your Phone Number is <font color="red">0{{$loanApp->phoneNumber}}</font></span><br><br>The maximum amount Tactika offers to loan requests are from one thousand to a range of five million naira (5,000,000) we do not offer above that, but if in any case an amount above that is required kindly contact us.</p> 
         
       </div>
@@ -66,6 +66,14 @@
   </div>
 </div>
 <!--end-->
+<a href="/loanapplication/{{$loanApp->id}}/edit" class="btn btn-outline-success btn-sm">Edit</a>
+<form method="POST" action="{{action('LoansApplicationController@destroy', $loanApp->id)}}">
+@csrf
+<div class="form-group">
+<input type="hidden" name="_method" value="DELETE">
+</div>
+<input type="submit" class="btn btn-outline-danger pull-right" value="Delete"/>
+</form>
 </div>
 </div>
 </section>

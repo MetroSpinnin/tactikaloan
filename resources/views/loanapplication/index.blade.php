@@ -31,8 +31,7 @@ Get a personal loan today to meet your daily needs, we have clear processes whic
 
 <div class="d-flex align-items-center">
 <div class="mr-2">
-<button class="btn btn-sm btn-outline-primary">Edit Loan</button>
-<button class="btn btn-sm btn-outline-primary">&nbsp; Delete Loan</button>
+<a href="mailto:Support@tactika.com.ng" class="btn btn-sm btn-outline-primary">Support</a>
 </div>
 </div>
 </div>
