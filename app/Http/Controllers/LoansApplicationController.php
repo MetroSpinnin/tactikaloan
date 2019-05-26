@@ -7,6 +7,18 @@ use App\LoanApplication;
 
 class LoansApplicationController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +27,7 @@ class LoansApplicationController extends Controller
     public function index()
     {
         $loanApps = LoanApplication::orderBy('id','desc')->paginate(5);
+        $loanApps->user_id = auth()->user()->name;
         return view('loanapplication.index')->with('loanApps', $loanApps);
     }
 
@@ -85,6 +98,11 @@ class LoansApplicationController extends Controller
     public function edit($id)
     {
         $loanApp = LoanApplication::find($id);
+
+        //check for correct user
+        if(auth()->user()->id !== $loanApp->user_id){
+            return redirect('loanapplication');
+        }
         return view('LoanApplication.edit')->with('loanApp', $loanApp);
     }
 
@@ -131,6 +149,11 @@ class LoansApplicationController extends Controller
     public function destroy($id)
     {
         $loanApp = LoanApplication::find($id);
+
+        //check for correct user
+        if(auth()->user()->id !== $loanApp->user_id){
+            return redirect('loanapplication');
+        }
         $loanApp->delete();
         return redirect('/loanapplication');
     }

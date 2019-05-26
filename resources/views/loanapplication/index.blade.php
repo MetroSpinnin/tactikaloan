@@ -7,6 +7,7 @@
 <div class="row justify-content-between"><br><br>
 <div class="col-12 col-md-12">
 @if(@count($loanApps) > 0)
+	@if(Auth::user()->id == $loanApps->user_id)
 		@foreach($loanApps as $loanApp)
 <div class="card">
 <ul class="list-group list-group-flush list-group-comments">
@@ -48,6 +49,7 @@ Get a personal loan today to meet your daily needs, we have clear processes whic
 		<div>
 		&rsaquo; <a href="#">You have Not requested Loans</a>
 		</div>
+		@endif
 	@endif
 </div>
 
