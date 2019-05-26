@@ -2,7 +2,8 @@
 @section('content')
 <section class="space-sm">
 <div class="container">
-<div class="row justify-content-between">
+<a href="/loanapplication/create" class="btn btn-success"> Make Loan Request </a><br><br>
+<div class="row justify-content-between"><br><br>
 <div class="col-12 col-md-12">
 @if(@count($loanApps) > 0)
 		@foreach($loanApps as $loanApp)

@@ -123,5 +123,9 @@
 
 <!-- Required theme scripts (Do not remove) -->
 <script type="text/javascript" src="{{asset('js/theme.js')}}"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
 </body>
 </html>
