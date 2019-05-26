@@ -9,7 +9,7 @@
 <link href="{{asset('css/socicon.css')}}" rel="stylesheet" type="text/css" media="all" />
 <link href="{{asset('css/entypo.css')}}" rel="stylesheet" type="text/css" media="all" />
 <link href="{{asset('css/theme.css')}}" rel="stylesheet" type="text/css" media="all" />
-<style>@font-face{font-family:all; src:url('{{asset('fonts/Nunito-Regular.woff')}}')format('woff');} *{font-family: all;} .bg-darky{background: rgb(241,254,245)!important;}.dotter{border-radius:100%;}.bg-gradient {background: linear-gradient(135deg, #283c86 0%, #45a247 100%) !important;}.navabar-toggler{color:green}</style>
+<style>@font-face{font-family:all; src:url('{{asset('fonts/Nunito-Regular.woff')}}')format('woff');} *{font-family: all;} .bg-darky{background: rgb(241,254,245)!important;}.dotter{border-radius:100%;}.squared{border:1px dashed green; padding:4px;}.bg-gradient {background: linear-gradient(135deg, #283c86 0%, #45a247 100%) !important;}.navabar-toggler{color:green}</style>
 </head>
 
 <body>
