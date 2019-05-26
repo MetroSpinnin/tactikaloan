@@ -9,4 +9,8 @@ class LoanApplication extends Model
     protected $tableName = "Loan_Applications";
     public $primaryKey = 'id';
     public $timestamps = true;
+
+    public function user(){
+    	$this->belongsTo('App\User');
+    }
 }

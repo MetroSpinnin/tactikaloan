@@ -13,7 +13,7 @@
 {{ session('status') }}
 </div>
 @endif
-
+<a href="/loanapplication/create" class="btn btn-outline-success"> Make Loan Request </a>
 You are logged in!
 </div>
 </div>

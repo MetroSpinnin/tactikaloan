@@ -2,7 +2,8 @@
 @section('content')
 <section class="space-sm">
 <div class="container">
-<a href="/loanapplication/create" class="btn btn-success"> Make Loan Request </a><br><br>
+<a href="/loanapplication/create" class="btn btn-outline-success"> Make Loan Request </a>
+<a href="/home" class="btn btn-outline-success"> Dashboard</a><br><br>
 <div class="row justify-content-between"><br><br>
 <div class="col-12 col-md-12">
 @if(@count($loanApps) > 0)

@@ -55,6 +55,7 @@ class LoansApplicationController extends Controller
         $loan->BusinessAddress = $request->input('BusinessAddress');
         $loan->phoneNumber = $request->input('phoneNumber');
         $loan->loanAmount = $request->input('loanAmount');
+        $loan->user_id = auth()->user()->id;
         $loan->save();
 
         //return redirects after saving to Database
