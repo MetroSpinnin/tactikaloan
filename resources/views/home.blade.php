@@ -13,8 +13,32 @@
 {{ session('status') }}
 </div>
 @endif
-<a href="/loanapplication/create" class="btn btn-outline-success"> Make Loan Request </a>
-You are logged in!
+<a href="/loanapplication/create" class="btn btn-outline-success"> Make Loan Request </a><br><br><br>
+@if(count($loanApplications)>0)
+<table class="table table-striped">
+	<tr>
+		<th>Employment status</th>
+		<th></th>
+		<th></th>
+	</tr>
+	@foreach($loanApplications as $loanApp)
+	<tr>
+		<td>{{$loanApp->employmentstatus}}</td>
+		<td><a href="/loanapplication/{{$loanApp->id}}/edit"> Edit</a></td>
+		<td><form method="POST" action="{{action('LoansApplicationController@destroy', $loanApp->id)}}">
+@csrf
+<div class="form-group">
+<input type="hidden" name="_method" value="DELETE">
+</div>
+<input type="submit" class="btn btn-outline-danger pull-right" value="Delete"/>
+</form></td>
+	</tr>
+	@endforeach
+</table>
+@else
+	You have no Loans
+@endif
+
 </div>
 </div>
 </div>

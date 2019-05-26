@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 class LoanApplication extends Model
 {
@@ -11,6 +12,6 @@ class LoanApplication extends Model
     public $timestamps = true;
 
     public function user(){
-    	$this->belongsTo('App\User');
+    	return $this->belongsTo('App\User');
     }
 }

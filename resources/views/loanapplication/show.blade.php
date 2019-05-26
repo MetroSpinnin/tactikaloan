@@ -11,7 +11,7 @@
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Loan Amount Requested</h5>
-        <p class="card-text " align="justify"><span class="squared">You requested for <font color="red">₦{{$loanApp->loanAmount}}</font></span><br><br>The maximum amount Tactika offers to loan requests are from one thousand to a range of five million naira (5,000,000) we do not offer above that, but if in any case an amount above that is required kindly contact us.</p>
+        <p class="card-text " align="justify"><span class="squared">{{$loanApp->user->name}} You requested for <font color="red">₦{{$loanApp->loanAmount}}</font></span><br><br>The maximum amount Tactika offers to loan requests are from one thousand to a range of five million naira (5,000,000) we do not offer above that, but if in any case an amount above that is required kindly contact us.</p>
         
       </div>
     </div>
