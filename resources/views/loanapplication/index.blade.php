@@ -7,7 +7,7 @@
 <div class="row justify-content-between"><br><br>
 <div class="col-12 col-md-12">
 @if(@count($loanApps) > 0)
-	@if(Auth::user()->id == $loanApps->user_id)
+	@if(Auth::user()->id)
 		@foreach($loanApps as $loanApp)
 <div class="card">
 <ul class="list-group list-group-flush list-group-comments">

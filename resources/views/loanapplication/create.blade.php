@@ -17,7 +17,7 @@
 <div class="bg-darky navbar-dark" data-sticky="top">
 <div class="container">
 <nav class="navbar navbar-expand-lg">
-<a class="navbar-brand" href="index.php">
+<a class="navbar-brand" href="/">
 <img alt="Tactika" src="{{asset('img/logo.png')}}" width="120px" />
 </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -26,8 +26,7 @@ class LoansApplicationController extends Controller
      */
     public function index()
     {
-        $loanApps = LoanApplication::orderBy('id','desc')->paginate(5);
-        $loanApps->user_id = auth()->user()->name;
+        $loanApps = LoanApplication::orderBy('id','desc')->whereUserId(auth()->user()->id)->paginate(5);
         return view('loanapplication.index')->with('loanApps', $loanApps);
     }
 

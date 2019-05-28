@@ -28,4 +28,9 @@ class HomeController extends Controller
         $user = User::find($user_id);
         return view('home')->with('loanApplications', $user->loanApplications);
     }
+
+     public function index1()
+    {
+        return view('home2');
+    }
 }
