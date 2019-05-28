@@ -1,0 +1,116 @@
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f3f3f3;
+    z-index: 1200;
+}
+
+#wave:after,
+#wave:before {
+    content: ''
+}
+
+#mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f3f3f3;
+    z-index: 99
+}
+
+#wave {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin: -25px 0 0 -25px;
+    border-radius: 50%
+}
+
+#wave:after,
+#wave:before {
+    border: 2px solid #16559A;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0
+}
+
+#wave:before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+    -webkit-animation: spWaveBe .6s infinite linear;
+    animation: spWaveBe .6s infinite linear
+}
+
+#wave:after {
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+    -webkit-animation: spWaveAf .6s infinite linear;
+    animation: spWaveAf .6s infinite linear
+}
+
+@-webkit-keyframes spWaveAf {
+    from {
+        -webkit-transform: scale(.5, .5);
+        transform: scale(.5, .5);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 1
+    }
+}
+
+@keyframes spWaveAf {
+    from {
+        -webkit-transform: scale(.5, .5);
+        transform: scale(.5, .5);
+        opacity: 0
+    }
+    to {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes spWaveBe {
+    from {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
+        opacity: 0
+    }
+}
+
+@keyframes spWaveBe {
+    from {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
+        opacity: 0
+    }
+}
