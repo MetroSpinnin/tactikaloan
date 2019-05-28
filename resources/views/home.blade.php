@@ -35,38 +35,30 @@
 </div>
 <div class="container">
 <div class="row">
-<div class="col-lg-12 d-flex">
-<div class="card justify-content-center p-lg-4 p-3" style="background: rgb(241,254,245);">
-<div class="card-body py-3 flex-grow-0">
-<p class="lead wfont" align="justify">@if (session('status'))
-<div class="alert alert-success" role="alert">
-{{ session('status') }}
-</div>
-@endif
-<a href="/loanapplication/create" class="btn btn-outline-success btn-sm"> Make Loan Request </a><br><br><br>
+<div class="col-md-8 d-flex">
+<br><br>
 @if(count($loanApplications)>0)
-<table class="table table-striped">
-	<tr>
-		<th>Loan Request ID Status</th>
-		<th>Edit Loan Request</th>
-		<th>Delete Your Loan Request</th>
-	</tr>
-	@foreach($loanApplications as $loanApp)
-	<tr>
-		<td>Number <font color='red'> #tac{{$loanApp->id}}</font> Loan Request</td>
-		<td><a href="/loanapplication/{{$loanApp->id}}/edit" class="btn btn-outline-success btn-sm"> Edit</a></td>
-		<td>
-		<!--<form method="POST" action="{{action('LoansApplicationController@destroy', $loanApp->id)}}">
-		@csrf
-		<div class="form-group">
-		<input type="hidden" name="_method" value="DELETE">
-		</div>
-		<input type="submit" class="btn btn-outline-danger btn-sm" value="Delete"/>
-		</form>-->
-		</td>
-	</tr>
-	@endforeach
-</table>
+@foreach($loanApplications as $loanApp)
+<div class="card">
+<ul class="list-group list-group-flush list-group-comments">
+<li class="list-group-item py-4">
+<div class="media">
+<img alt="Image" src="{{asset('img/avatar-bd.jpg')}}" class="mr-2 avatar avatar-sm rounded-circle" width="60px" height="60px" /><br>
+<div class="media-body">
+<div class="mb-2">
+<span class="h6 mb-0"><font color="red">₦{{$loanApp->loanAmount}}</font> Loan Requested</span><br>
+<span class="text-muted">Loan Applied for on {{$loanApp->created_at}}</span>
+</div>
+<p align="justify">
+{{$loanApp->user->name}} Get a personal loan today to meet your daily needs, we have clear processes which helps you estimate your loan amount, interest rate and possible repayment plan.
+</p>
+</div>
+</div>
+
+</li>
+@endforeach
+</ul>
+
 @else
 	You have no Loans
 @endif</p>
@@ -97,9 +89,8 @@
 <h5 class="card-title" style="font-weight: bold;"><a href='/loanapplication'>Loan Requests</a></h5>
 </div>
 </div>
-
 </div>
-
+<br><br>
 </div>
 <!-- end of MetroSecond Row -->
 </div>

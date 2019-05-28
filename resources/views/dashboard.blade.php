@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>welcome To your dashboard</title>
+<title>{{$loanApp->user->name}} Dashboard </title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -60,7 +60,7 @@ Tip 2: you can also add an image using data-image tag
 </a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="#0">
+<a class="nav-link" href="/loanapplication/create">
 <i class="material-icons"></i>
 <p> &rsaquo; Apply for Loan</p>
 </a>
