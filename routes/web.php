@@ -22,3 +22,8 @@ Route::get('/loan', 'PageController@loanPage');
 Route::get('/investors', 'PageController@investorsPage');
 
 Route::resource('loanapplication', 'LoansApplicationController');
+
+//paystack pay route
+Route::post('/pay', 'PaystackController@redirectToGateway')->name('pay');
+//paystack callback route
+Route::get('/paystack/callback', 'PaystackController@handleGatewayCallback');
