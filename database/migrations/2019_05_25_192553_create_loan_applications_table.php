@@ -20,6 +20,7 @@ class CreateLoanApplicationsTable extends Migration
             $table->string('BusinessName');
             $table->string('BusinessAddress');
             $table->integer('phoneNumber');
+            $table->string('bvn');
             $table->integer('loanAmount');
             $table->timestamps();
         });

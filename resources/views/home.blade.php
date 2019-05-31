@@ -50,7 +50,7 @@
 <span class="text-muted">Loan Applied for on {{$loanApp->created_at}}</span>
 </div>
 <p align="justify">
-{{$loanApp->user->name}} Get a personal loan today to meet your daily needs, we have clear processes which helps you estimate your loan amount, interest rate and possible repayment plan.
+{{$loanApp->user->name}} You have applied for a loan, we have clear processes which helps you estimate your loan amount, interest rate and possible repayment plan.
 </p>
 </div>
 </div>

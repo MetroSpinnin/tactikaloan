@@ -25,7 +25,7 @@ Get a personal loan today to meet your daily needs, we have clear processes whic
 
 <div class="alert alert-warning" role="alert">
 <div>
-&rsaquo; <a href="/loanapplication/{{$loanApp->id}}">View your Number {{$loanApp->id}} Loan </a>
+&rsaquo; <a href="/loanapplication/{{$loanApp->id}}">Number {{$loanApp->id}} Loan </a>
 </div>
 
 <small class="text-muted">Date of Request: {{$loanApp->created_at}} By {{$loanApp->user->name}}</small>

@@ -36,6 +36,29 @@ Whether you are a student or Market woman or Business person or Salary earner Ge
 @enderror
 
 </div>
+
+<div class="form-group">
+<input id="phonenumber" type="text" class="form-control @error('phonenumber') is-invalid @enderror" name="phone" placeholder="phone number" required autocomplete="phonenumber">
+
+@error('phoneNumber')
+<span class="invalid-feedback" role="alert">
+<strong>{{ $message }}</strong>
+</span>
+@enderror
+
+</div>
+
+<div class="form-group">
+<input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date" value="2019-05-31" placeholder="Date of birth" required autocomplete="date">
+
+@error('date')
+<span class="invalid-feedback" role="alert">
+<strong>{{ $message }}</strong>
+</span>
+@enderror
+
+</div>
+
 <div class="form-group">
 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password">
 

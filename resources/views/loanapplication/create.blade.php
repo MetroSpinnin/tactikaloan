@@ -39,12 +39,6 @@
 </li>
 </ul>
 
-<ul class="navbar-nav">
-<li class="nav-item d-flex align-items-center">
-<a href="/login" class="btn btn-success"><b>Login Now</b></a>
-</li>
-</ul>
-
 </div>
 <!--end nav collapse-->
 </nav>
@@ -63,6 +57,18 @@
 <div class="carousel-cell col-md-9 align-items-center" style="background:rgb(241,254,245); border-radius:5px; padding:12px;">
 <form method="POST" action="{{action('LoansApplicationController@store')}}">
 @csrf
+
+<div class="form-group">
+<input id="bvn" type="text" class="form-control @error('bvn') is-invalid @enderror" name="bvn" placeholder="Your BVN Number" required autocomplete="bvn">
+
+@error('bvn')
+<span class="invalid-feedback" role="alert">
+<strong>{{ $message }}</strong>
+</span>
+@enderror
+
+</div>
+
 <div class="form-group">
 <input id="employmentstatus" type="text" class="form-control @error('employmentstatus') is-invalid @enderror" name="employmentstatus" value="{{ old('employmentstatus') }}" placeholder="employment status" required autocomplete="employmentstatus" autofocus>
 
