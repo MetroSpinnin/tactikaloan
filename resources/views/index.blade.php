@@ -49,7 +49,7 @@ Whether you are a student or Market woman or Business person or Salary earner Ge
 </div>
 
 <div class="form-group">
-<input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date" placeholder="Date of birth" required autocomplete="date">
+<input id="date" type="text" class="form-control @error('date') is-invalid @enderror" name="date" placeholder="yyyy-mm-dd Date of birth" required autocomplete="date">
 
 @error('date')
 <span class="invalid-feedback" role="alert">
