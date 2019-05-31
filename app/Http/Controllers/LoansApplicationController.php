@@ -51,6 +51,7 @@ class LoansApplicationController extends Controller
     {
         //
         $this->validate($request, [
+            'bvn' => 'required',
             'employmentstatus' => 'required',
             'occupation' => 'required',
             'BusinessName' => 'required',
@@ -61,6 +62,7 @@ class LoansApplicationController extends Controller
 
         //create Loans
         $loan  = new LoanApplication;
+        $loan->bvn = $request->input('bvn');
         $loan->employmentstatus = $request->input('employmentstatus');
         $loan->occupation = $request->input('occupation');
         $loan->BusinessName = $request->input('BusinessName');
@@ -116,6 +118,7 @@ class LoansApplicationController extends Controller
     {
         //
          $this->validate($request, [
+            'bvn' => 'required',
             'employmentstatus' => 'required',
             'occupation' => 'required',
             'BusinessName' => 'required',
@@ -126,6 +129,7 @@ class LoansApplicationController extends Controller
 
         //create Loans
         $loan  = LoanApplication::find($id);
+        $loan->bvn = $request->input('bvn');
         $loan->employmentstatus = $request->input('employmentstatus');
         $loan->occupation = $request->input('occupation');
         $loan->BusinessName = $request->input('BusinessName');
