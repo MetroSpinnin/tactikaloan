@@ -60,7 +60,13 @@
 </ul>
 
 @else
-	You have no Loans
+<div class="card">
+<ul class="list-group list-group-flush list-group-comments">
+<li class="list-group-item py-4">
+<div class="media-body">
+<div class="mb-2">
+<span class="h6 mb-0"><font color="red"><p class="lead">You have not Applied for Any Loans</p></font></span></div>
+</div>
 @endif</p>
 </div>
 </div>
@@ -72,19 +78,19 @@
 <div class="row col-md-12">
 <div class="card-deck">
 <div class="card" style="background:rgb(241,254,245);">
-<img src="../img/loann.jpeg" class="card-img-top" alt="..." style="    box-shadow: 0 0 10px 9px #78b19663;">
+<img src="../img/loann.jpeg" class="card-img-top" alt="..." style="box-shadow: 0 0 10px 9px #78b19663;">
 <div class="card-body">
 <h5 class="card-title" style="font-weight: bold;"><a href="#">Account Activities</a></h5>
 </div>
 </div>
 <div class="card" style="background:rgb(241,254,245);">
-<img src="../img/loann2.jpeg" class="card-img-top" alt="..." style="    box-shadow: 0 0 10px 9px #78b19663;">
+<img src="../img/loann2.jpeg" class="card-img-top" alt="..." style="box-shadow: 0 0 10px 9px #78b19663;">
 <div class="card-body">
 <h5 class="card-title" style="font-weight: bold;"><a href='/loanapplication'>Applied Loans</a></h5>
 </div>
 </div>
 <div class="card" style="background:rgb(241,254,245);">
-<img src="../img/loann3.jpeg" class="card-img-top" alt="..." style="    box-shadow: 0 0 10px 9px #78b19663;">
+<img src="../img/loann3.jpeg" class="card-img-top" alt="..." style="box-shadow: 0 0 10px 9px #78b19663;">
 <div class="card-body">
 <h5 class="card-title" style="font-weight: bold;"><a href='/loanapplication'>Loan Requests</a></h5>
 </div>
