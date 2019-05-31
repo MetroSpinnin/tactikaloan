@@ -119,7 +119,6 @@ Tactika Loan
 <div class="copyright float-right"><script src="js/bundle.js"></script></i>
 <a href="#" target="_blank">Tactika</a> LLC.
 </div>
-<!-- your footer here -->
 </div>
 </footer>
 </div>

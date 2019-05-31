@@ -7,7 +7,7 @@
 <div class="card" style="background:rgb(241,254,245);">
 <img src="../img/l1.jpg" class="card-img-top" alt="..." style="  box-shadow: 0 0 10px 9px #78b19663;">
 <div class="card-body">
-<p class="card-text" align="justify" style="font-weight: bold;">Total Loan: 0</p>
+<p class="card-text" align="justify" style="font-weight: bold;">Total Loan: {{ $loanApplications->count() }}</p>
 </div>
 </div>
 <div class="card" style="background:rgb(241,254,245);">

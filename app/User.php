@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function LoanApplications(){
         return $this->hasMany('App\LoanApplication');
     }
+
+    public function getLoanCountAttribute(){
+    return $this->LoanApplications()->count();
+    }
 }

@@ -29,8 +29,4 @@ class HomeController extends Controller
         return view('home')->with('loanApplications', $user->loanApplications);
     }
 
-     public function index1()
-    {
-        return view('home2');
-    }
 }
